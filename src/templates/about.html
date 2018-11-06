@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>About</h1>
+
+    <p>{{ my_text }} <-- var hentet fra django :o </p>
+    <ul>
+    {% for element in my_list %}
+        {%  if element == "something"%}
+            <li>
+                This would have returned something, but i don't want to show it to you lol :P
+            </li>
+        {% else %}
+            <li>
+                element
+            </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endblock %}
